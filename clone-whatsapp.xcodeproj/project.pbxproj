@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		FE98BB8A2B20129D0084CF70 /* clone_whatsappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB892B20129D0084CF70 /* clone_whatsappApp.swift */; };
-		FE98BB8C2B20129D0084CF70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB8B2B20129D0084CF70 /* ContentView.swift */; };
+		FE98BB8C2B20129D0084CF70 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB8B2B20129D0084CF70 /* MainView.swift */; };
 		FE98BB8E2B2012A00084CF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE98BB8D2B2012A00084CF70 /* Assets.xcassets */; };
 		FE98BB912B2012A00084CF70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE98BB902B2012A00084CF70 /* Preview Assets.xcassets */; };
+		FE98BB982B230D540084CF70 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB972B230D540084CF70 /* Item.swift */; };
+		FE98BB9B2B230DAC0084CF70 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB9A2B230DAC0084CF70 /* Avatar.swift */; };
+		FE98BB9D2B231F3C0084CF70 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB9C2B231F3C0084CF70 /* ChatScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE98BB862B20129D0084CF70 /* clone-whatsapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-whatsapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE98BB892B20129D0084CF70 /* clone_whatsappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clone_whatsappApp.swift; sourceTree = "<group>"; };
-		FE98BB8B2B20129D0084CF70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FE98BB8B2B20129D0084CF70 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FE98BB8D2B2012A00084CF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE98BB902B2012A00084CF70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE98BB972B230D540084CF70 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FE98BB9A2B230DAC0084CF70 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		FE98BB9C2B231F3C0084CF70 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				FE98BB892B20129D0084CF70 /* clone_whatsappApp.swift */,
-				FE98BB8B2B20129D0084CF70 /* ContentView.swift */,
+				FE98BB992B230D5F0084CF70 /* Chat */,
+				FE98BB8B2B20129D0084CF70 /* MainView.swift */,
 				FE98BB8D2B2012A00084CF70 /* Assets.xcassets */,
 				FE98BB8F2B2012A00084CF70 /* Preview Content */,
 			);
@@ -65,6 +72,16 @@
 				FE98BB902B2012A00084CF70 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE98BB992B230D5F0084CF70 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				FE98BB972B230D540084CF70 /* Item.swift */,
+				FE98BB9A2B230DAC0084CF70 /* Avatar.swift */,
+				FE98BB9C2B231F3C0084CF70 /* ChatScreen.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE98BB8C2B20129D0084CF70 /* ContentView.swift in Sources */,
+				FE98BB8C2B20129D0084CF70 /* MainView.swift in Sources */,
+				FE98BB9D2B231F3C0084CF70 /* ChatScreen.swift in Sources */,
 				FE98BB8A2B20129D0084CF70 /* clone_whatsappApp.swift in Sources */,
+				FE98BB9B2B230DAC0084CF70 /* Avatar.swift in Sources */,
+				FE98BB982B230D540084CF70 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
