@@ -33,7 +33,7 @@ struct ContentView: View {
             .padding()
             .tabItem {
                 Label(
-                    title: { Text("Panggilan") },
+                    title: { Text("Calls") },
                     icon: { Image(systemName: "phone") }
                 )
             }
@@ -47,21 +47,15 @@ struct ContentView: View {
             .padding()
             .tabItem {
                 Label(
-                    title: { Text("Komunitas") },
+                    title: { Text("Communities") },
                     icon: { Image(systemName: "person.3") }
                 )
             }
             
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-            }
-            .padding()
+            ChatScreen()
             .tabItem {
                 Label(
-                    title: { Text("Chat") },
+                    title: { Text("Chats") },
                     icon: { Image(systemName: "message") }
                 )
             }
@@ -75,7 +69,7 @@ struct ContentView: View {
             .padding()
             .tabItem {
                 Label(
-                    title: { Text("Pengaturan") },
+                    title: { Text("Settings") },
                     icon: { Image(systemName: "gear") }
                 )
             }

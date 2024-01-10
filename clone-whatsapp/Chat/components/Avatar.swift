@@ -9,17 +9,17 @@ import SwiftUI
 
 
 enum AvatarSize: CGFloat {
-    case sm = 50
-    case md = 80
-    case lg = 100
+    case sm = 40
+    case md = 50
+    case lg = 80
     
     var width: CGFloat {
         switch self {
-        case .sm: return 50
+        case .sm: return 40
         case .md:
-            return 80
+            return 50
         case .lg:
-            return 100
+            return 80
         }
     }
     
@@ -36,7 +36,7 @@ struct Avatar: View {
     private let width: CGFloat?
     private let height: CGFloat?
     
-    init(name: String? = nil, image: String? = nil, size: AvatarSize = .sm) {
+    init(name: String? = nil, image: String? = nil, size: AvatarSize = .md) {
         self.name = name
         self.image = image
         self.size = size

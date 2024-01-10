@@ -14,6 +14,9 @@
 		FE98BB982B230D540084CF70 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB972B230D540084CF70 /* Item.swift */; };
 		FE98BB9B2B230DAC0084CF70 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB9A2B230DAC0084CF70 /* Avatar.swift */; };
 		FE98BB9D2B231F3C0084CF70 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB9C2B231F3C0084CF70 /* ChatScreen.swift */; };
+		FE98BB9F2B242BFE0084CF70 /* NewChatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB9E2B242BFE0084CF70 /* NewChatSheet.swift */; };
+		FE98BBA22B2440A30084CF70 /* GetContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BBA12B2440A30084CF70 /* GetContact.swift */; };
+		FE98BBA52B24BFB50084CF70 /* ChatDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BBA42B24BFB50084CF70 /* ChatDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,10 @@
 		FE98BB972B230D540084CF70 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FE98BB9A2B230DAC0084CF70 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		FE98BB9C2B231F3C0084CF70 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		FE98BB9E2B242BFE0084CF70 /* NewChatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatSheet.swift; sourceTree = "<group>"; };
+		FE98BBA12B2440A30084CF70 /* GetContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContact.swift; sourceTree = "<group>"; };
+		FE98BBA32B2449E90084CF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE98BBA42B24BFB50084CF70 /* ChatDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 		FE98BB882B20129D0084CF70 /* clone-whatsapp */ = {
 			isa = PBXGroup;
 			children = (
+				FE98BBA32B2449E90084CF70 /* Info.plist */,
 				FE98BB892B20129D0084CF70 /* clone_whatsappApp.swift */,
 				FE98BB992B230D5F0084CF70 /* Chat */,
 				FE98BB8B2B20129D0084CF70 /* MainView.swift */,
@@ -77,11 +85,30 @@
 		FE98BB992B230D5F0084CF70 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				FE98BB972B230D540084CF70 /* Item.swift */,
-				FE98BB9A2B230DAC0084CF70 /* Avatar.swift */,
+				FE98BBA02B24407F0084CF70 /* components */,
 				FE98BB9C2B231F3C0084CF70 /* ChatScreen.swift */,
+				FE98BBA42B24BFB50084CF70 /* ChatDetailScreen.swift */,
+				FE98BBA62B24C1EB0084CF70 /* Model */,
+				FE98BB9E2B242BFE0084CF70 /* NewChatSheet.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		FE98BBA02B24407F0084CF70 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				FE98BB972B230D540084CF70 /* Item.swift */,
+				FE98BB9A2B230DAC0084CF70 /* Avatar.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		FE98BBA62B24C1EB0084CF70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE98BBA12B2440A30084CF70 /* GetContact.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +183,9 @@
 			files = (
 				FE98BB8C2B20129D0084CF70 /* MainView.swift in Sources */,
 				FE98BB9D2B231F3C0084CF70 /* ChatScreen.swift in Sources */,
+				FE98BBA22B2440A30084CF70 /* GetContact.swift in Sources */,
+				FE98BB9F2B242BFE0084CF70 /* NewChatSheet.swift in Sources */,
+				FE98BBA52B24BFB50084CF70 /* ChatDetailScreen.swift in Sources */,
 				FE98BB8A2B20129D0084CF70 /* clone_whatsappApp.swift in Sources */,
 				FE98BB9B2B230DAC0084CF70 /* Avatar.swift in Sources */,
 				FE98BB982B230D540084CF70 /* Item.swift in Sources */,
@@ -292,8 +322,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clone-whatsapp/Preview Content\"";
+				DEVELOPMENT_TEAM = 657928G6CW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "clone-whatsapp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,8 +352,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"clone-whatsapp/Preview Content\"";
+				DEVELOPMENT_TEAM = 657928G6CW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "clone-whatsapp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
