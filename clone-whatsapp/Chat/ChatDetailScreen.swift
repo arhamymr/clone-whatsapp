@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 enum ChatMessageDirection {
     case left
     case right
 }
 
-struct ChatBubbleItem: View {
-    
+struct ChatBubleItem: View {
     let message: String
     let direction: ChatMessageDirection
     let read: Bool
@@ -35,29 +36,25 @@ struct ChatBubbleItem: View {
 }
 
 
-struct ChatBubbleMessage: Hashable {
-    let message: String
-    let user: String
-    let read: Bool
-}
 
 struct ChatDetailScreen: View {
     
-    @State var chats = [
-        ChatBubbleMessage(message: "Hellow", user: "me", read: true),
-        ChatBubbleMessage(message: "How are you", user: "me", read: true),
-        ChatBubbleMessage(message: "I'm fine bisakah kita pergi ke sana sekarang ", user: "kaiden", read: true),
-        ChatBubbleMessage(message: "let go to the hills", user: "kaiden", read: true),
-        ChatBubbleMessage(message: "oh now", user: "me", read: false),
-        ChatBubbleMessage(message: "Hellow", user: "kaiden", read: false),
-    ]
+    @Environment(\.modelContext) var modalContext;
+    
+    @Query var chats: [ChatBubleItemModel]
     
     @State private  var messageText = ""
     
     private func sendMessage() {
-        let newMessage = ChatBubbleMessage(message: messageText, user: "me", read: false)
-        print("send message")
-        self.chats.append(newMessage)
+        let newMessage = ChatBubleItemModel(message: messageText, read: false, user: "me" )
+        self.messageText = ""
+        modalContext.insert(newMessage)
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let answerMessage = ChatBubleItemModel(message: "What ?", read: false, user: "kaidan")
+            modalContext.insert(answerMessage)
+        }
     }
     
     var body: some View {
@@ -65,13 +62,15 @@ struct ChatDetailScreen: View {
             VStack {
                 VStack(){
                     Spacer()
-                    ForEach (chats, id: \.self) { chat in
+                    ForEach (chats) { chat in
                         HStack {
-                            ChatBubbleItem(message: chat.message, direction: chat.user == "me" ? .right : .left, read: chat.read, user: chat.user)
+                            ChatBubleItem(message: chat.message, direction: chat.user == "me" ? .right : .left, read: chat.read, user: chat.user)
                         }
                     }
-                }.padding()
-            
+                }
+              
+                
+                .padding()
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(
                         leading: HStack {
@@ -110,7 +109,7 @@ struct ChatDetailScreen: View {
                             ZStack(alignment: .trailing){
                                 Image(systemName: "doc").foregroundColor(.blue)
                                     .padding(.trailing, 10)
-                                TextField("", text: $messageText)
+                                TextField("", text: $messageText, onCommit: sendMessage)
                                     .padding(10)
                                     .background(.gray.opacity(0.1))
                                     .cornerRadius(20)
@@ -132,4 +131,6 @@ struct ChatDetailScreen: View {
 
 #Preview {
     ChatDetailScreen()
+        .modelContainer(for: ChatBubleItemModel.self)
+    
 }

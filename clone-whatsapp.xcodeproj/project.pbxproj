@@ -17,6 +17,7 @@
 		FE98BB9F2B242BFE0084CF70 /* NewChatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BB9E2B242BFE0084CF70 /* NewChatSheet.swift */; };
 		FE98BBA22B2440A30084CF70 /* GetContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BBA12B2440A30084CF70 /* GetContact.swift */; };
 		FE98BBA52B24BFB50084CF70 /* ChatDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98BBA42B24BFB50084CF70 /* ChatDetailScreen.swift */; };
+		FEF0F0B92B4FBD7F00CDFECB /* ChatDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF0F0B82B4FBD7F00CDFECB /* ChatDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FE98BBA12B2440A30084CF70 /* GetContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContact.swift; sourceTree = "<group>"; };
 		FE98BBA32B2449E90084CF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FE98BBA42B24BFB50084CF70 /* ChatDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailScreen.swift; sourceTree = "<group>"; };
+		FEF0F0B82B4FBD7F00CDFECB /* ChatDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FE98BBA12B2440A30084CF70 /* GetContact.swift */,
+				FEF0F0B82B4FBD7F00CDFECB /* ChatDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				FE98BB8C2B20129D0084CF70 /* MainView.swift in Sources */,
 				FE98BB9D2B231F3C0084CF70 /* ChatScreen.swift in Sources */,
 				FE98BBA22B2440A30084CF70 /* GetContact.swift in Sources */,
+				FEF0F0B92B4FBD7F00CDFECB /* ChatDetail.swift in Sources */,
 				FE98BB9F2B242BFE0084CF70 /* NewChatSheet.swift in Sources */,
 				FE98BBA52B24BFB50084CF70 /* ChatDetailScreen.swift in Sources */,
 				FE98BB8A2B20129D0084CF70 /* clone_whatsappApp.swift in Sources */,

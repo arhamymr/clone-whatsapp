@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct clone_whatsappApp: App {
@@ -13,5 +14,7 @@ struct clone_whatsappApp: App {
         WindowGroup {
             ContentView()
         }
+        // pass swift data model context
+        .modelContainer(for: ChatBubleItemModel.self)
     }
 }
